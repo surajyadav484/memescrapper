@@ -21,5 +21,5 @@ app.listen(PORT, () => {
       "https://www.facebook.com/media/set/?set=a.860635874288770&type=3",
       "https://www.facebook.com/media/set/?set=a.527860673898191&type=3",
     ]);
-  }, 1000);
+  }, 15 * 60 * 1000);
 });
