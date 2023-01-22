@@ -16,5 +16,9 @@ const Meme = sequelize.define("meme", {
   id: { type: DataTypes.STRING, primaryKey: true },
   imageUrl: DataTypes.STRING,
 });
+const MemePage = sequelize.define("memepage", {
+  id: { type: DataTypes.STRING },
+  pageUrl: DataTypes.STRING,
+});
 
-module.exports = Meme;
+module.exports = { Meme, MemePage };
