@@ -42,7 +42,7 @@ const scrapImage = async (urls) => {
     );
     //-------------------
     await Meme.bulkCreate(filteredImage);
-    console.log(imageList?.length);
+    // console.log(imageList?.length);
   } catch (err) {
     console.log(err);
   }
@@ -52,9 +52,4 @@ const scrapImage = async (urls) => {
 
 // scrapImage("https://www.facebook.com/media/set/?set=a.860635874288770&type=3");
 
-setInterval(() => {
-  scrapImage([
-    "https://www.facebook.com/media/set/?set=a.860635874288770&type=3",
-    "https://www.facebook.com/media/set/?set=a.527860673898191&type=3",
-  ]);
-}, 15 * 60 * 1000);
+module.exports = scrapImage;

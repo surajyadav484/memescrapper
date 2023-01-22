@@ -1,6 +1,7 @@
 const Meme = require("./db");
 
 const express = require("express");
+const scrapImage = require("./index");
 const app = express();
 
 app.get("/image", async (req, res) => {
@@ -15,4 +16,10 @@ app.get("/image", async (req, res) => {
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`App started listening at ${PORT}`);
+  setInterval(() => {
+    scrapImage([
+      "https://www.facebook.com/media/set/?set=a.860635874288770&type=3",
+      "https://www.facebook.com/media/set/?set=a.527860673898191&type=3",
+    ]);
+  }, 1000);
 });
