@@ -12,7 +12,7 @@ app.get("/image", async (req, res) => {
     res.json({ error: error.message });
   }
 });
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`App started listening at ${PORT}`);
 });
