@@ -17,7 +17,7 @@ const Meme = sequelize.define("meme", {
   imageUrl: DataTypes.STRING,
 });
 const MemePage = sequelize.define("memepage", {
-  id: { type: DataTypes.STRING },
+  id: { type: DataTypes.STRING, primaryKey: true },
   pageUrl: DataTypes.STRING,
 });
 
